@@ -2,6 +2,7 @@
 #define Operation_H
 #include <iostream>
 #include <vector>
+#include "OperationParser.cpp"
 class Operation{
     
     public : 
@@ -9,7 +10,7 @@ class Operation{
     virtual int compute();
     virtual void printOperation();
     int computed_value;
-    Operation* operations[];
+    std::vector<Operation*> operations;
 
     private :
     

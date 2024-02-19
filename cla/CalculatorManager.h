@@ -14,12 +14,9 @@ class CalculatorManager{
     int useCalculator(std::string equation);
 
 
-
-
     private :
     Calculator* calculator; 
     CalculatorHistory* history; 
-    OperationParser* parser; 
 };
 
 

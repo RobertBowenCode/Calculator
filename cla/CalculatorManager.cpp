@@ -9,10 +9,7 @@ CalculatorManager::CalculatorManager(){
 
 int CalculatorManager::useCalculator(std::string equation)
 {
-           
-
     return calculator->calculate(equation);
-
 }
 
 Calculator* CalculatorManager::getCalculator()

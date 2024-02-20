@@ -1,7 +1,7 @@
 #ifndef Calculator_H
 #define Calculator_H
 #include <iostream>
-#include "./operations/OperationParser.h"
+#include "./operations/OperationParser.cpp"
 
 class Calculator{
 

@@ -7,15 +7,16 @@
 #include "./operation_handlers/Multiply.cpp"
 #include "./operation_handlers/Number.cpp"
 
-class OperationParser
+namespace  OperationParser //I think we need this to be a namespace right? 
 {
-    public :
-    static Operation* parse(std::string input);
-    static int stringToInteger(std::string value);
+    int stringToInteger(std::string value);
+    Operation* do_something_unique(std::string equation);
 
-    private: 
-    static std::vector<std::string> delimEquation(std::string equation, std::string delim);
+    std::vector<std::string> delimEquation(std::string equation, std::string delim);
     
 
 };
+
+
+
 #endif

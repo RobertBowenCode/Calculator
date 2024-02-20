@@ -1,7 +1,7 @@
 #ifndef Add_H
 #define Add_H
 #include <iostream>
-#include "./operations/Operation.h"
+#include "../Operation.h"
 
 class Add : public Operation{
 

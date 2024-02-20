@@ -1,42 +1,49 @@
 #include "./OperationParser.h"
 
+namespace OperationParser {
 
-Operation* OperationParser::parse(std::string equation)
-{
-    std::vector<std::string> delim_equation = std::vector<std::string>(); 
+void foo() { std::cout << "foo!"; }
 
-    delim_equation = delimEquation(equation, "+"); 
+extern Operation* parse(std::string equation){
+        std::vector<std::string> delim_equation = std::vector<std::string>(); 
 
-    if(delim_equation.size() > 1)
-    {
-        return (Operation*)(new Add(delim_equation)); //Add
+        delim_equation = delimEquation(equation, "+"); 
+
+        if(delim_equation.size() > 1)
+        {
+           return (Operation*)(new Add(delim_equation)); //Add
+        }
+
+        delim_equation = delimEquation(equation, "-"); 
+
+        if(delim_equation.size() > 1)
+        {
+            return (Operation*)(new Subtract(delim_equation)); //Minus
+        }
+
+
+        delim_equation = delimEquation(equation, "*"); 
+
+        if(delim_equation.size() > 1)
+        {
+            return (Operation*) (new Multiply(delim_equation)); //multiply
+        }
+
+        delim_equation = delimEquation(equation, "/"); 
+
+        if(delim_equation.size() > 1)
+        {
+            return (Operation*)(new Divide(delim_equation)); //Divide
+        }
+
+        return (Operation*)(new Number(equation));
+
     }
-
-    delim_equation = delimEquation(equation, "-"); 
-
-    if(delim_equation.size() > 1)
-    {
-        return (Operation*)(new Subtract(delim_equation)); //Minus
-    }
-
-
-    delim_equation = delimEquation(equation, "*"); 
-
-    if(delim_equation.size() > 1)
-    {
-        return (Operation*) (new Multiply(delim_equation)); //multiply
-    }
-
-    delim_equation = delimEquation(equation, "/"); 
-
-    if(delim_equation.size() > 1)
-    {
-        return (Operation*)(new Divide(delim_equation)); //Divide
-    }
-
-    return (Operation*)(new Number(equation));
 
 }
+
+
+
 
 int OperationParser::stringToInteger(std::string value)
 {
@@ -45,6 +52,8 @@ int OperationParser::stringToInteger(std::string value)
     
     return std::stoi(value);
 }
+
+
 
 std::vector<std::string> OperationParser::delimEquation(std::string equation, std::string delim)
 {

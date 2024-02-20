@@ -1,7 +1,7 @@
 #ifndef Subtract_H
 #define Subtract_H
 #include <iostream>
-#include "./operations/Operation.h"
+#include "../Operation.h"
 
 class Subtract : public Operation{
 

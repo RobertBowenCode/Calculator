@@ -1,7 +1,7 @@
 #ifndef Multiply_H
 #define Multiply_H
 #include <iostream>
-#include "./operations/Operation.h"
+#include "../Operation.h"
 
 class Multiply : public Operation{
 

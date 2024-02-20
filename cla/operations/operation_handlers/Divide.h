@@ -1,7 +1,7 @@
 #ifndef Divide_H
 #define Divide_H
 #include <iostream>
-#include "./operations/Operation.h"
+#include "../Operation.h"
 
 class Divide : public Operation{
 

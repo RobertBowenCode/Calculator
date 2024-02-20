@@ -2,10 +2,11 @@
 #define Operation_H
 #include <iostream>
 #include <vector>
-#include "OperationParser.cpp"
+
 class Operation{
     
     public : 
+    Operation();
     Operation(std::vector<std::string> delimited_equation);
     virtual int compute();
     virtual void printOperation();
@@ -16,14 +17,5 @@ class Operation{
     
 
 };
-
-
-
-
-
-
-/**
-okay so what should go in the calculatorApp? 
-*/
 
 #endif

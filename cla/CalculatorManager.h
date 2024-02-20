@@ -1,9 +1,9 @@
 #ifndef CalculatorManager_H
 #define CalculatorManager_H
 
-#include "./Calculator.h"
-#include "./CalculatorHistory.h"
-#include "./operations/OperationParser.h"
+#include "./Calculator.cpp"
+#include "./CalculatorHistory.cpp"
+
 class CalculatorManager{
 
     public : 
